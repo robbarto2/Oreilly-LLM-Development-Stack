@@ -1,0 +1,14 @@
+numpy>=1.24.0
+pandas>=2.0.0
+torch>=2.0.0
+transformers>=4.30.0
+accelerate>=0.20.0
+peft>=0.4.0
+bitsandbytes>=0.39.0
+sentencepiece>=0.1.99
+langchain>=0.1.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+pytest>=7.3.0
+black>=23.3.0
+flake8>=6.0.0
