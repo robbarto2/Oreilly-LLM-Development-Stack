@@ -1,2 +1,5 @@
 # Ignore Python virtual environment
 venv/
+
+# Ignore Ollama chat logs
+ollama_chat*
