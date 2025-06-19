@@ -13,3 +13,8 @@ pytest>=7.3.0
 black>=23.3.0
 flake8>=6.0.0
 ollama==0.5.1
+boto3
+streamlit
+langchain-community>=0.3.25
+watchdog
+langchain-aws
