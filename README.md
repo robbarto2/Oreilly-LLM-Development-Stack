@@ -94,34 +94,32 @@ To make the most of this course, you should have:
 
 ## Repository Structure
 
-Section-1-Foundational-Tools/  
-&nbsp;&nbsp;&nbsp;&nbsp;Google_Colab_Demo.ipynb  
-&nbsp;&nbsp;&nbsp;&nbsp;Huggingface_Demo.ipynb  
+The repository is organized into sections that correspond to the course modules, with additional supporting files:
 
-Section-2-LLM-Management-Platforms/  
-&nbsp;&nbsp;&nbsp;&nbsp;Ollama_Setup_Guide.md  
-&nbsp;&nbsp;&nbsp;&nbsp;OpenWebUI_App_Demo.ipynb  
+### Course Sections
 
-Section-3-Agentic-Development-Tools/  
-&nbsp;&nbsp;&nbsp;&nbsp;LangChain_Agent_Example.ipynb  
-&nbsp;&nbsp;&nbsp;&nbsp;CrewAI_Workflow_Demo.ipynb  
+- `Section-1-Foundational-Tools/` – Includes Google Colab and Hugging Face demos to introduce the development environment  
+- `Section-2-LLM-Management-Platforms/` – Resources and examples using Ollama, LM Studio, and Open WebUI  
+- `Section-3-Agentic-Development-Tools/` – Agentic AI frameworks like LangChain, LangGraph, CrewAI, and AutoGen  
+- `Section-4-Agentic-Protocols/` – Covers Message Chain Protocol (MCP), Agent-to-Agent (A2A), and Model Context Protocol  
+- `Section-5-Cloud-LLM-Platforms/` – Hands-on projects using AWS Bedrock, Google Vertex, and Azure AI Studio  
+- `Section-6-LLM-Evaluation/` – Notebooks and materials to benchmark and evaluate LLM performance  
 
-Section-4-Agentic-Protocols/  
-&nbsp;&nbsp;&nbsp;&nbsp;MCP_Example.md  
-&nbsp;&nbsp;&nbsp;&nbsp;A2A_Message_Structure.md  
+### Supporting Files
 
-Section-5-Cloud-LLM-Platforms/  
-&nbsp;&nbsp;&nbsp;&nbsp;Bedrock_Quickstart.ipynb  
-&nbsp;&nbsp;&nbsp;&nbsp;Vertex_vs_Bedrock_vs_Azure.md  
+- `requirements.txt` – Lists all Python package dependencies  
+- `.gitignore` – Specifies files and directories to be ignored by Git  
+- `Slides/` – All course presentation materials  
 
-Section-6-LLM-Evaluation/  
-&nbsp;&nbsp;&nbsp;&nbsp;Benchmarking_Frameworks.md  
-&nbsp;&nbsp;&nbsp;&nbsp;Eval_Methods_Demo.ipynb  
+Each section directory typically contains:
 
-Slides/  
-&nbsp;&nbsp;&nbsp;&nbsp;Presentation materials  
+- Python scripts (`.py`) and Jupyter notebooks (`.ipynb`) with working examples  
+- Data files used in the examples (where applicable)  
+- README files with section-specific instructions  
+- Visualizations and demos  
+- Additional explanatory materials  
 
-README.md
+> **Note:** Some sections may be added or updated as the course progresses.
 
 ---
 
