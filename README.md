@@ -109,7 +109,6 @@ The repository is organized into sections that correspond to the course modules,
 
 - `requirements.txt` – Lists all Python package dependencies  
 - `.gitignore` – Specifies files and directories to be ignored by Git  
-- `Slides/` – All course presentation materials  
 
 Each section directory typically contains:
 
