@@ -1,20 +1,42 @@
+# Core scientific/data stack
 numpy>=1.24.0
 pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# PyTorch and HuggingFace stack (for LLMs, embeddings, agentic tools)
 torch>=2.0.0
 transformers>=4.30.0
 accelerate>=0.20.0
 peft>=0.4.0
 bitsandbytes>=0.39.0
-sentencepiece>=0.1.99
+
+# LangChain and LLM orchestration
 langchain>=0.1.0
-matplotlib>=3.7.0
-seaborn>=0.12.0
+langchain-community>=0.3.25
+boto3
+streamlit
+
+# Ollama integration (Lesson 2)
+ollama==0.5.1
+
+# LlamaIndex (RAG and vector DB demos)
+llama-index
+
+# AWS integrations
+# (langchain-aws is not required unless you use advanced LangChain AWS modules)
+
+# Utility and API packages
+requests
+python-dotenv
+openai
+
+# Agentic protocol demos
+autogen
+
+# Dev/test tools
 pytest>=7.3.0
 black>=23.3.0
 flake8>=6.0.0
-ollama==0.5.1
-boto3
-streamlit
-langchain-community>=0.3.25
-watchdog
-langchain-aws
+
+# Remove: watchdog, langchain-aws, sentencepiece (unless you use models that require them)
