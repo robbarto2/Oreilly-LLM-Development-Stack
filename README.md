@@ -1,63 +1,24 @@
 # The LLM Development Stack
 
-This is the official GitHub repository for the Pearson Live Training course “The LLM Development Stack,” created by Rob Barton and Jerome Henry.
+This is the official GitHub repository for the Pearson Live Training course **“The LLM Development Stack”**, created by Rob Barton and Jerome Henry.
 
-This course introduces developers and engineers to the tools, platforms, and frameworks that make up the modern LLM development stack. You’ll explore hands-on environments like Google Colab and Hugging Face, local model serving platforms like Ollama and LM Studio, agentic AI frameworks like LangChain and CrewAI, and cutting-edge communication protocols like Message Chain Protocol (MCP) and Agent-to-Agent (A2A). You’ll also learn how to benchmark and evaluate LLMs, and how to build full-stack generative AI apps in the cloud using AWS Bedrock, Azure AI Studio, and Google Vertex.
-
-The course is designed to be hands-on and practical, with live demos and labs throughout.
+This course introduces developers and engineers to the complete modern LLM development stack, covering foundational tools, local model-serving platforms, agentic frameworks and protocols, cloud-based deployment, and evaluation/benchmarking—all delivered through practical demos, code labs, and live Q&A.
 
 ---
 
 ## Authors
 
-- Rob Barton, Cisco Distinguished Engineer  
-- Jerome Henry, Cisco Principal Engineer
-
----
-
-## Prerequisites
-
-To get the most from this course, you should have:
-
-- Basic Python skills  
-- Familiarity with AI/ML concepts  
-- A GitHub account and access to Google Colab
-
----
-
-## Repository Structure
-
-This repository is organized by section. Each section contains example code, labs, and demonstrations that are aligned with the course modules.
-
-Section-1-Foundational-Tools/
-Section-2-LLM-Management-Platforms/
-Section-3-Agentic-Development-Tools/
-Section-4-Agentic-Protocols/
-Section-5-Cloud-LLM-Platforms/
-Section-6-LLM-Evaluation/
-Slides/
-README.md
-
-
----
-
-## Getting Started
-
-1. Clone the repository:
-
-git clone https://github.com/robbarto2/Oreilly-LLM-Development-Stack.git
-cd Oreilly-LLM-Development-Stack
-
-
-2. Open the appropriate section folder.
-
-3. Use Google Colab or VS Code to run the provided notebooks and code samples.
+| Name            | Role                            |
+|-----------------|---------------------------------|
+| Rob Barton      | Cisco Distinguished AI Engineer |
+| Jerome Henry    | Cisco Distinguished Engineer    |
 
 ---
 
 ## Course Outline
 
 ### Section 1: LLM Development Foundational Tools
+
 This section is a combination of demo and slides, introducing the environments and platforms used throughout the course.
 
 - Google Colab  
@@ -67,6 +28,7 @@ This section is a combination of demo and slides, introducing the environments a
 ---
 
 ### Section 2: LLM Management Platforms
+
 Learn how to run LLMs locally using modern tools for inference and UI.
 
 - Overview of Ollama and LMStudio  
@@ -77,6 +39,7 @@ Learn how to run LLMs locally using modern tools for inference and UI.
 ---
 
 ### Section 3: Agentic AI Development Tools
+
 Build intelligent AI agents using Python and agentic development frameworks.
 
 - Agentic frameworks: LangChain/LangGraph, CrewAI, AutoGen  
@@ -87,6 +50,7 @@ Build intelligent AI agents using Python and agentic development frameworks.
 ---
 
 ### Section 4: Agentic AI Development Protocols
+
 Explore how agents interact and share context using cutting-edge protocols.
 
 - Agentic Protocols  
@@ -98,6 +62,7 @@ Explore how agents interact and share context using cutting-edge protocols.
 ---
 
 ### Section 5: Cloud-based LLM Development Platforms
+
 Deploy and scale your AI applications using cloud-based LLM tools.
 
 - Overview of Cloud LLM development tools (Google Vertex, Azure AI Studio, AWS Bedrock)  
@@ -108,6 +73,7 @@ Deploy and scale your AI applications using cloud-based LLM tools.
 ---
 
 ### Section 6: LLM Evaluation and Benchmarking
+
 Learn how to evaluate and benchmark your LLM-based applications.
 
 - LLM Benchmarking Overview  
@@ -116,4 +82,67 @@ Learn how to evaluate and benchmark your LLM-based applications.
 
 ---
 
-> This repository will be updated regularly as the course progresses.
+## Prerequisites
+
+To make the most of this course, you should have:
+
+- Basic Python programming experience  
+- Familiarity with AI/ML concepts  
+- A GitHub account and the ability to use browser-based coding tools (e.g., Google Colab)
+
+---
+
+## Repository Structure
+
+Section-1-Foundational-Tools/  
+&nbsp;&nbsp;&nbsp;&nbsp;Google_Colab_Demo.ipynb  
+&nbsp;&nbsp;&nbsp;&nbsp;Huggingface_Demo.ipynb  
+
+Section-2-LLM-Management-Platforms/  
+&nbsp;&nbsp;&nbsp;&nbsp;Ollama_Setup_Guide.md  
+&nbsp;&nbsp;&nbsp;&nbsp;OpenWebUI_App_Demo.ipynb  
+
+Section-3-Agentic-Development-Tools/  
+&nbsp;&nbsp;&nbsp;&nbsp;LangChain_Agent_Example.ipynb  
+&nbsp;&nbsp;&nbsp;&nbsp;CrewAI_Workflow_Demo.ipynb  
+
+Section-4-Agentic-Protocols/  
+&nbsp;&nbsp;&nbsp;&nbsp;MCP_Example.md  
+&nbsp;&nbsp;&nbsp;&nbsp;A2A_Message_Structure.md  
+
+Section-5-Cloud-LLM-Platforms/  
+&nbsp;&nbsp;&nbsp;&nbsp;Bedrock_Quickstart.ipynb  
+&nbsp;&nbsp;&nbsp;&nbsp;Vertex_vs_Bedrock_vs_Azure.md  
+
+Section-6-LLM-Evaluation/  
+&nbsp;&nbsp;&nbsp;&nbsp;Benchmarking_Frameworks.md  
+&nbsp;&nbsp;&nbsp;&nbsp;Eval_Methods_Demo.ipynb  
+
+Slides/  
+&nbsp;&nbsp;&nbsp;&nbsp;Presentation materials  
+
+README.md
+
+---
+
+## Getting Started
+
+1. Clone this repository to your local machine:
+
+   `git clone https://github.com/robbarto2/Oreilly-LLM-Development-Stack.git`
+
+2. Navigate to the project directory:
+
+   `cd Oreilly-LLM-Development-Stack`
+
+3. Install dependencies:
+
+   `pip install -r requirements.txt`
+
+4. Open any of the demo notebooks in Google Colab or your preferred IDE.
+
+5. (Optional) For local development, install tools like Ollama and LM Studio.
+
+---
+
+This repository will be updated regularly as the course progresses.
