@@ -103,7 +103,7 @@ The repository is organized into sections that correspond to the course modules,
 - `Lesson-3-Agentic-Development-Tools/` – Agentic AI frameworks like LangChain, LangGraph, CrewAI, and AutoGen  
 - `Lesson-4-Agentic-Protocols/` – Covers Message Chain Protocol (MCP), Agent-to-Agent (A2A), and Model Context Protocol  
 - `Lesson-5-Cloud-LLM-Platforms/` – Hands-on projects using AWS Bedrock, Google Vertex, and Azure AI Studio  
-- `Section-6-LLM-Evaluation/` – Notebooks and materials to benchmark and evaluate LLM performance  
+- `Lesson-6-LLM-Evaluation/` – Notebooks and materials to benchmark and evaluate LLM performance  
 
 ### Supporting Files
 
