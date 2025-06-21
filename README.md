@@ -98,11 +98,11 @@ The repository is organized into sections that correspond to the course modules,
 
 ### Course Sections
 
-- `Section-1-Foundational-Tools/` – Includes Google Colab and Hugging Face demos to introduce the development environment  
-- `Section-2-LLM-Management-Platforms/` – Resources and examples using Ollama, LM Studio, and Open WebUI  
-- `Section-3-Agentic-Development-Tools/` – Agentic AI frameworks like LangChain, LangGraph, CrewAI, and AutoGen  
-- `Section-4-Agentic-Protocols/` – Covers Message Chain Protocol (MCP), Agent-to-Agent (A2A), and Model Context Protocol  
-- `Section-5-Cloud-LLM-Platforms/` – Hands-on projects using AWS Bedrock, Google Vertex, and Azure AI Studio  
+- `Lesson-1-Foundational-Tools/` – Includes Google Colab and Hugging Face demos to introduce the development environment  
+- `Lesson-2-LLM-Management-Platforms/` – Resources and examples using Ollama, LM Studio, and Open WebUI  
+- `Lesson-3-Agentic-Development-Tools/` – Agentic AI frameworks like LangChain, LangGraph, CrewAI, and AutoGen  
+- `Lesson-4-Agentic-Protocols/` – Covers Message Chain Protocol (MCP), Agent-to-Agent (A2A), and Model Context Protocol  
+- `Lesson-5-Cloud-LLM-Platforms/` – Hands-on projects using AWS Bedrock, Google Vertex, and Azure AI Studio  
 - `Section-6-LLM-Evaluation/` – Notebooks and materials to benchmark and evaluate LLM performance  
 
 ### Supporting Files
