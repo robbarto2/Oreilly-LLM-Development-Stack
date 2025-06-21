@@ -22,12 +22,13 @@ prompt = {
 }
 
 try:
-    response = bedrock_runtime.invoke_model(
-        modelId=model_id,
-        contentType="application/json",
-        accept="application/json",
-        body=json.dumps(prompt)
-    )
+    invoke_kwargs = {
+        "modelId": model_id,
+        "contentType": "application/json",
+        "accept": "application/json",
+        "body": json.dumps(prompt)
+    }
+    response = bedrock_runtime.invoke_model(**invoke_kwargs)
 
     # Parse and print the response
     result = json.loads(response["body"].read())
