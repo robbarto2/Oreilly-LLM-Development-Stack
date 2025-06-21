@@ -72,12 +72,12 @@ Deploy and scale your AI applications using cloud-based LLM tools.
 
 ---
 
-### Section 6: LLM Evaluation and Benchmarking
+### Section 6: LLM Monitoring and Observability
 
-Learn how to evaluate and benchmark your LLM-based applications.
+Learn how to monitor and observe LLM-based applications.
 
-- LLM Benchmarking Overview  
-- Methods to benchmark performance of LLMs  
+- Overview of LLM monitoring and observability  
+- An introduction to LangSmith  
 - Q&A
 
 ---
@@ -103,7 +103,7 @@ The repository is organized into sections that correspond to the course modules,
 - `Lesson-3-Agentic-Development-Tools/` – Agentic AI frameworks like LangChain, LangGraph, CrewAI, and AutoGen  
 - `Lesson-4-Agentic-Protocols/` – Covers Message Chain Protocol (MCP), Agent-to-Agent (A2A), and Model Context Protocol  
 - `Lesson-5-Cloud-LLM-Platforms/` – Hands-on projects using AWS Bedrock, Google Vertex, and Azure AI Studio  
-- `Lesson-6-LLM-Evaluation/` – Notebooks and materials to benchmark and evaluate LLM performance  
+- `Lesson-6-LLM-Monitoring and Observability/` – An introduction to LangSmith 
 
 ### Supporting Files
 
