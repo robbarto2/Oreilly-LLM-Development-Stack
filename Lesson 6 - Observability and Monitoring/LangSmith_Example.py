@@ -5,10 +5,10 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-# CRITICAL: Set all required environment variables for LangSmith tracing
-os.environ["LANGCHAIN_TRACING_V2"] = "true"  # This is the KEY missing variable!
+# Set all required environment variables for LangSmith tracing
+os.environ["LANGCHAIN_TRACING_V2"] = "true"  
 os.environ["LANGCHAIN_ENDPOINT"] = "https://api.smith.langchain.com"
-os.environ["LANGCHAIN_PROJECT"] = "default"  # Optional: specify project name
+os.environ["LANGCHAIN_PROJECT"] = "Climate Research"  # Optional: specify project name
 
 print("LangSmith tracing is enabled. View your traces at https://smith.langchain.com/")
 
@@ -18,6 +18,7 @@ from langchain_community.vectorstores import Chroma
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import TextLoader
 from langchain.chains import RetrievalQA
+from langsmith import traceable
 
 # --- Basic RAG Pipeline ---
 print("Setting up basic RAG pipeline...")
