@@ -7,7 +7,7 @@ data = {
         "model": "gemma3:4b",
         "prompt": "tell me a short story about Ireland and make it funny"
 }
-print("hello world")
+
 response = requests.post(url, json=data, stream=True)
 
 #check the response
