@@ -13,6 +13,8 @@ bitsandbytes>=0.39.0
 
 # LangChain and LLM orchestration
 langchain>=0.1.0
+langsmith
+langchain-ollama
 langchain-community>=0.3.25
 boto3
 streamlit
@@ -27,7 +29,7 @@ ollama==0.5.1
 llama-index
 
 # AWS integrations
-# (langchain-aws is not required unless you use advanced LangChain AWS modules)
+langchain-aws
 
 # Utility and API packages
 requests
@@ -41,5 +43,3 @@ autogen
 pytest>=7.3.0
 black>=23.3.0
 flake8>=6.0.0
-
-# Remove: watchdog, langchain-aws, sentencepiece (unless you use models that require them)
