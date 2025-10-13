@@ -8,7 +8,7 @@ load_dotenv()
 # Set all required environment variables for LangSmith tracing
 os.environ["LANGCHAIN_TRACING_V2"] = "true"  
 os.environ["LANGCHAIN_ENDPOINT"] = "https://api.smith.langchain.com"
-os.environ["LANGCHAIN_PROJECT"] = "LLM Feedback"  # Optional: specify project name
+os.environ["LANGCHAIN_PROJECT"] = "Agentic Tracing"  # Optional: specify project name
 
 print("LangSmith tracing is enabled. View your traces at https://smith.langchain.com/")
 
@@ -21,42 +21,6 @@ from langchain.chains import RetrievalQA
 from langsmith import traceable
 from langsmith import Client  # Import the LangSmith Client for feedback logging
 from langsmith.run_helpers import trace  # Use the correct tracing context manager
-
-# --- Basic RAG Pipeline ---
-print("Setting up basic RAG pipeline...")
-
-# Debugging: Print working directory and files
-print("Current working directory:", os.getcwd())
-print("Files in directory:", os.listdir())
-# Use absolute path for Noclimate.txt
-file_path = os.path.join(os.path.dirname(__file__), "Noclimate.txt")
-print("Resolved Noclimate.txt path:", file_path)
-loader = TextLoader(file_path)
-raw_docs = loader.load()
-
-# Split the document into smaller overlapping chunks
-splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=100)
-docs = splitter.split_documents(raw_docs)
-
-# Load embedding model via Ollama
-embeddings = OllamaEmbeddings(model="mxbai-embed-large")
-
-# Create Chroma vector store 
-vs = Chroma.from_documents(docs, embeddings, persist_directory="lc_chroma")
-
-# Create retriever using MMR
-retriever = vs.as_retriever(search_type="mmr", search_kwargs={"k": 4})
-
-# Load the language model
-llm = OllamaLLM(model="llama3")
-
-# Create RetrievalQA chain
-qa = RetrievalQA.from_chain_type(llm=llm, retriever=retriever)
-
-# Run the pipeline
-print("Running basic RAG query...")
-result = qa.invoke({"query": "What causes the most CO2 emissions?"})
-print("[Basic RAG]", result)
 
 # --- Agentic Pipeline with Tools ---
 print("\nSetting up agentic pipeline...")
