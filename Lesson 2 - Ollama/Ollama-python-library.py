@@ -1,7 +1,7 @@
 import ollama
 import json
 
-def send_message_to_ollama(role, user, content, model="gemma3:4b"):
+def send_message_to_ollama(role, user, content, model="gemma3:4b", system_prompt="You are a smart assistant in the style of Carl Sagan."):
     """
     Send a message to the Ollama model using the ollama Python library.
 
@@ -16,20 +16,20 @@ def send_message_to_ollama(role, user, content, model="gemma3:4b"):
     """
     # Build the chat messages list with a system prompt
     messages = [
-        {"role": "system", "content": "You are a smart assistant in the style of Carl Sagan."},
+        {"role": "system", "content": system_prompt},
         {"role": role, "content": f"{user}: {content}"}
     ]
     response = ollama.chat(model=model, messages=messages)
     return response["message"]["content"]
 
 
-def terminal_chat(model="gemma3:4b"):
+def terminal_chat(model="gemma3:4b", system_prompt="You are a smart assistant in the style of Carl Sagan."):
     """
     Start an interactive chat session with the Ollama model from the terminal.
     Type 'exit' to quit.
     """
     messages = [
-        {"role": "system", "content": "You are a smart assistant in the style of Carl Sagan."}
+        {"role": "system", "content": system_prompt}
     ]
     print("Type 'exit' to quit.")
     import datetime
