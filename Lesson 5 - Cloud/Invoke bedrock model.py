@@ -13,7 +13,7 @@ prompt = {
     "messages": [
         {
             "role": "user",
-            "content": "explain where the james webb space telescope is located."
+            "content": "explain where the hubble space telescope is located."
         }
     ],
     "max_tokens": 512,
