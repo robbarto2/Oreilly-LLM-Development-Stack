@@ -8,7 +8,7 @@ load_dotenv()
 # Set all required environment variables for LangSmith tracing
 os.environ["LANGCHAIN_TRACING_V2"] = "true"  
 os.environ["LANGCHAIN_ENDPOINT"] = "https://api.smith.langchain.com"
-os.environ["LANGCHAIN_PROJECT"] = "Agentic Tracing"  # Optional: specify project name
+os.environ["LANGCHAIN_PROJECT"] = "Co2 Question Tracing"  # Optional: specify project name
 
 print("LangSmith tracing is enabled. View your traces at https://smith.langchain.com/")
 
