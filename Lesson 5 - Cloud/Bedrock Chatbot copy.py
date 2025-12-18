@@ -7,8 +7,11 @@ import streamlit as st
 os.environ["AWS_PROFILE"] = "robbarto"
 bedrock_client = boto3.client("bedrock-runtime", region_name="us-east-2")
 
+GUARDRAIL_IDENTIFIER = os.getenv("BEDROCK_GUARDRAIL_IDENTIFIER", "").strip()
+GUARDRAIL_VERSION = os.getenv("BEDROCK_GUARDRAIL_VERSION", "DRAFT").strip()
+
 # --- Mistral 7B Instruct Model ID ---
-MISTRAL_MODEL_ID = "mistral.mistral-7b-instruct-v0:2"
+#MISTRAL_MODEL_ID = "mistral.mistral-7b-instruct-v0:2"
 CLAUDE_HAIKU_ARN = "arn:aws:bedrock:us-east-2:368661395607:inference-profile/global.anthropic.claude-haiku-4-5-20251001-v1:0"
 CLAUDE_HAIKU_GLOBAL_PROFILE = "global.anthropic.claude-haiku-4-5-20251001-v1:0"
 MODEL_ID = CLAUDE_HAIKU_ARN
@@ -36,12 +39,19 @@ def invoke_claude(messages, max_tokens, temperature):
         "anthropic_version": "bedrock-2023-05-31",
     }
 
-    response = bedrock_client.invoke_model(
-        modelId=MODEL_ID,
-        contentType="application/json",
-        accept="application/json",
-        body=json.dumps(payload),
-    )
+    invoke_kwargs = {
+        "modelId": MODEL_ID,
+        "contentType": "application/json",
+        "accept": "application/json",
+        "body": json.dumps(payload),
+    }
+    if st.session_state.get("guardrails_enabled") and GUARDRAIL_IDENTIFIER:
+        invoke_kwargs["guardrailIdentifier"] = GUARDRAIL_IDENTIFIER
+        invoke_kwargs["guardrailVersion"] = GUARDRAIL_VERSION
+        if st.session_state.get("guardrails_trace"):
+            invoke_kwargs["trace"] = "ENABLED"
+
+    response = bedrock_client.invoke_model(**invoke_kwargs)
 
     result = json.loads(response["body"].read())
     content = result.get("content") or []
@@ -55,6 +65,16 @@ st.sidebar.markdown("**Model:**")
 st.sidebar.code(MODEL_ID)
 st.sidebar.markdown(f"**Inference profile ARN:** `{CLAUDE_HAIKU_ARN}`")
 st.sidebar.markdown(f"**Global inference profile:** `{CLAUDE_HAIKU_GLOBAL_PROFILE}`")
+st.sidebar.markdown("**Guardrails:**")
+st.session_state.guardrails_enabled = st.sidebar.toggle(
+    "Enable Guardrail",
+    value=bool(GUARDRAIL_IDENTIFIER),
+)
+st.sidebar.caption(
+    f"Identifier: `{GUARDRAIL_IDENTIFIER or 'Not set (BEDROCK_GUARDRAIL_IDENTIFIER)'}`\n\n"
+    f"Version: `{GUARDRAIL_VERSION}`"
+)
+st.session_state.guardrails_trace = st.sidebar.toggle("Enable Guardrail trace", value=False)
 temperature = st.sidebar.slider("Creativity (temperature)", 0.0, 1.5, 0.9, 0.1)
 
 if st.sidebar.button("🔄 Reset Chat"):
